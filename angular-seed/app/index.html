@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="directive/ctrlA.js"></script>
+    <script src="directive/ctrlB.js"></script>
+    <script src="directive/ctrlC.js"></script>
+    <script src="directive/ctrlD.js"></script>
+    <script src="directive/ctrlE.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="appCtrl">
+        <div>
+            <h1>appController</h1>
+            <input type="text" name="" ng-model="name"><span>{{name}}</span>
+            <div>
+                <input type="text" name="" ng-model="obj.age">obj.age : {{ obj.age }}</div>
+            <div>
+                <input type="text" name="" ng-model="info">info : {{ info }}</div>
+            <hr>
+        </div>
+        <directive-a ng-controller="ctrlA"></directive-a>
+        <hr>
+        <directive-b ng-controller="ctrlB"></directive-b>
+        <hr>
+        <directive-c name={{name}} obj={{obj}} info={{info}}></directive-c>
+        <hr>
+        <directive-d name=name obj=obj info='info'></directive-d>
+        <hr>
+        <directive-e dir-click="click()"></directive-e>
+    </div>
+</body>
+
+</html>
