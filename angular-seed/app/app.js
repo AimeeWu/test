@@ -3,7 +3,7 @@ angular.module('myApp', [])
 .controller('appCtrl', ['$scope', function($scope){
 	console.log('appCtrl ---------------------');
 	$scope.click = function(){
-		console.log('click');
+		alert('click');
 		console.log($scope);
 	}
 	$scope.info = 'aaa';

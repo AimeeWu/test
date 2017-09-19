@@ -5,6 +5,12 @@
         .controller("ctrlC", ["$scope", "$rootScope",
             function($scope, $rootScope) {
                 // $scope.name = 'ccc'
+                console.log('ctrlC -------------');
+                $scope.$watch('info',function(newVal){
+                    console.log('ctrlC ============');
+                    console.log(newVal);
+                    console.log($scope);
+                })
             }
         ])
         .directive('directiveC', function() {
